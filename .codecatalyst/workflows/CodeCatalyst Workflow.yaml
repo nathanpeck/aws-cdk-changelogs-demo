@@ -6,6 +6,9 @@ Triggers:
   - Type: Push
     Branches:
       - main
+  - Type: PUSH
+    Branches:
+      - master
 
 # Required - Define action configurations.
 Actions:
