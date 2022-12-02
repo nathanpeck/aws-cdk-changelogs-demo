@@ -1,4 +1,4 @@
-Name: Workflow_7619
+Name: deploy-to-test
 SchemaVersion: "1.0"
 
 # Optional - Set automatic triggers.
