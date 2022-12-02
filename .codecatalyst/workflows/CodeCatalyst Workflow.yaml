@@ -29,7 +29,7 @@ Actions:
     Configuration:
       Region: us-east-1
       StackName: changelogs-md-resources
-    Timeout: 5
+    Timeout: 65
     Environment:
       Connections:
         - Role: CodeCatalystPreviewDevelopmentAdministrator-pb2jkx
