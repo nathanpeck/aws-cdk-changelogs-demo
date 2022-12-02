@@ -1,0 +1,37 @@
+Name: Workflow_7619
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - main
+
+# Required - Define action configurations.
+Actions:
+  AWSCDKbootstrap_93:
+    Identifier: aws/cdk-bootstrap@v1
+    Configuration:
+      Region: us-east-1
+    Environment:
+      Connections:
+        - Role: CodeCatalystPreviewDevelopmentAdministrator-pb2jkx
+          Name: "449876148567"
+      Name: changelogs-test
+    Inputs:
+      Sources:
+        - WorkflowSource
+  AWSCDKdeploy_28:
+    Identifier: aws/cdk-deploy@v1
+    Configuration:
+      Region: us-east-1
+      StackName: changelogs-md-resources
+    Timeout: 5
+    Environment:
+      Connections:
+        - Role: CodeCatalystPreviewDevelopmentAdministrator-pb2jkx
+          Name: "449876148567"
+      Name: changelogs-test
+    Inputs:
+      Sources:
+        - WorkflowSource
